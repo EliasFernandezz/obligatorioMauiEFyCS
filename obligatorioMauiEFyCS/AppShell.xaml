@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="obligatorioMauiEFyCS.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:obligatorioMauiEFyCS"
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="Login" />
+    
+    <FlyoutItem
+            <ShellContent
+            Title="Patrocinadores"
+            ContentTemplate="{DataTemplate local:PatrocinadoresGeneral}"
+            Route="PatrocinadoresGeneral" 
+                
+                <ShellContent
+                Title="Gestionar patrocinadores"
+                ContentTemplate="{DataTemplate local:GestionarPatrocinadores}"
+                Route="GestionarPatrocinadores" />
+
+                <ShellContent
+                Title="Ver patrocinadores"
+                ContentTemplate="{DataTemplate local:VerPatrocinadores}"
+                Route="VerPatrocinadores" />
+
+        />
+                
+    />
+
+
+<Shell>
