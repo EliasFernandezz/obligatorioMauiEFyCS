@@ -3,32 +3,51 @@
     x:Class="obligatorioMauiEFyCS.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:obligatorioMauiEFyCS"
-    
+    xmlns:local="clr-namespace:obligatorioMauiEFyCS">
+
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:Login}"
         Route="Login" />
-    
-    <FlyoutItem
-            <ShellContent
-            Title="Patrocinadores"
-            ContentTemplate="{DataTemplate local:PatrocinadoresGeneral}"
-            Route="PatrocinadoresGeneral" 
-                
-                <ShellContent
-                Title="Gestionar patrocinadores"
-                ContentTemplate="{DataTemplate local:GestionarPatrocinadores}"
-                Route="GestionarPatrocinadores" />
 
-                <ShellContent
-                Title="Ver patrocinadores"
-                ContentTemplate="{DataTemplate local:VerPatrocinadores}"
-                Route="VerPatrocinadores" />
+    <FlyoutItem Title="Patrocinadores">
+        <ShellContent
+            Title="Gestionar patrocinadores"
+            ContentTemplate="{DataTemplate local:GestionarPatrocinadores}"
+            Route="GestionarPatrocinadores" />
 
-        />
-                
-    />
+        <ShellContent
+            Title="Ver patrocinadores"
+            ContentTemplate="{DataTemplate local:VerPatrocinadores}"
+            Route="VerPatrocinadores" />
+    </FlyoutItem>
 
+    <FlyoutItem Title="Clima">
+        <ShellContent
+            Title="Clima actual y pronostico"
+            ContentTemplate="{DataTemplate local:Clima}"
+            Route="Clima" />
+    </FlyoutItem>
 
-<Shell>
+    <FlyoutItem Title="Cotizaciones">
+        <ShellContent
+            Title="Cotizacion frente a peso uruguayo"
+            ContentTemplate="{DataTemplate local:Cotizaciones}"
+            Route="Cotizaciones" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Noticias">
+        <ShellContent
+            Title="Noticias actuales de Uruguay"
+            ContentTemplate="{DataTemplate local:Noticias}"
+            Route="Noticias" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Cine">
+        <ShellContent
+            Title="Proximos estrenos"
+            ContentTemplate="{DataTemplate local:Cine}"
+            Route="Cine" />
+    </FlyoutItem>
+
+</Shell>
