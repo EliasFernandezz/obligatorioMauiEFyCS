@@ -5,8 +5,48 @@
              Title="Noticias">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Noticias"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1"
+            Margin="0,0,0,40" />
+
+        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
+            <Frame>
+                <Label Text="Noticia 1" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 2" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 3" />
+            </Frame>
+        </FlexLayout>
+
+        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
+            <Frame>
+                <Label Text="Noticia 4" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 5" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 6" />
+            </Frame>
+        </FlexLayout>
+
+        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
+            <Frame>
+                <Label Text="Noticia 7" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 8" />
+            </Frame>
+            <Frame>
+                <Label Text="Noticia 9" />
+            </Frame>
+        </FlexLayout>
+
     </VerticalStackLayout>
 </ContentPage>
