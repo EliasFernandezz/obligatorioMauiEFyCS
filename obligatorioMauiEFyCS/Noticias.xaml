@@ -3,50 +3,165 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Noticias"
              Title="Noticias">
-    <VerticalStackLayout>
-        <Label 
-            Text="Noticias"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1"
-            Margin="0,0,0,40" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Noticias del Uruguay"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="0,0,0,40" />
 
-        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
-            <Frame>
-                <Label Text="Noticia 1" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 2" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 3" />
-            </Frame>
-        </FlexLayout>
+            <Grid RowSpacing="15" ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
-            <Frame>
-                <Label Text="Noticia 4" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 5" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 6" />
-            </Frame>
-        </FlexLayout>
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia1" 
+                            Text="Noticia 1" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia1" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia1"
+                            Text="Descripción de la noticia 1" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
 
-        <FlexLayout Direction="Row" JustifyContent="SpaceAround" AlignItems="Center" Margin="0,0,0,60">
-            <Frame>
-                <Label Text="Noticia 7" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 8" />
-            </Frame>
-            <Frame>
-                <Label Text="Noticia 9" />
-            </Frame>
-        </FlexLayout>
+                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia2" 
+                            Text="Noticia 2" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia2" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia2"
+                            Text="Descripción de la noticia 2" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
 
-    </VerticalStackLayout>
+                <Frame Grid.Row="0" Grid.Column="2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia3" 
+                            Text="Noticia 3" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia3" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia3"
+                            Text="Descripción de la noticia 3" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia4" 
+                            Text="Noticia 4" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia4" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia4"
+                            Text="Descripción de la noticia 4" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia5" 
+                            Text="Noticia 5" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia5" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia5"
+                            Text="Descripción de la noticia 5" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia6" 
+                            Text="Noticia 6" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia6" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia6"
+                            Text="Descripción de la noticia 6" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
