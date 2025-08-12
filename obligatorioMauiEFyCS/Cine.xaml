@@ -3,10 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Cine"
              Title="Cine">
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Entry x:Name="GeneroEntry" Placeholder="Escribí el género" />
+
+        <Button Text="Buscar por genero" Clicked="OnFiltrarPeliculasPorGeneroYPalabra" />
+
+        <CollectionView x:Name="EstrenosList">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="10"
+                        Margin="5"
+                        HasShadow="True"
+                        BorderColor="LightGray"
+                        CornerRadius="10">  
+                        
+                        <VerticalStackLayout>
+                            <Image
+                            Source="{Binding PosterPath}"
+                            Aspect="AspectFill"
+                            HeightRequest="200"
+                            WidthRequest="150"
+                            HorizontalOptions="Center" />
+
+                            <Label
+                            Text="{Binding Title}"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,5,0,0" />
+
+                            <Label
+                            Text="{Binding Overview}"
+                            FontSize="Small"
+                            TextColor="Black"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,3,0,3" />
+
+                            <Label
+                            Text="{Binding ReleaseDate}"
+                            FontSize="Small"
+                            TextColor="Gray"
+                            HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
+
 </ContentPage>
