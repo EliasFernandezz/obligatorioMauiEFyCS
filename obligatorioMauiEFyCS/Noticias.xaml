@@ -13,7 +13,7 @@
                 SemanticProperties.HeadingLevel="Level1"
                 Margin="0,0,0,40" />
 
-            <Grid RowSpacing="15" ColumnSpacing="15">
+            <Grid x:Name="gridNoticias" RowSpacing="15" ColumnSpacing="15">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -24,7 +24,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia1" 
                             Text="Noticia 1" 
@@ -44,10 +44,19 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia2" 
                             Text="Noticia 2" 
@@ -67,10 +76,19 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace2"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="0" Grid.Column="2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia3" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia3" 
                             Text="Noticia 3" 
@@ -90,10 +108,19 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace3"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia4" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia4" 
                             Text="Noticia 4" 
@@ -113,10 +140,19 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace4"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia5" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia5" 
                             Text="Noticia 5" 
@@ -136,10 +172,19 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace5"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="1" Grid.Column="2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <Frame x:Name="frameNoticia6" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
                     <StackLayout>
                         <Label x:Name="tituloNoticia6" 
                             Text="Noticia 6" 
@@ -159,6 +204,15 @@
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
                             FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace6"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Frame>
             </Grid>
