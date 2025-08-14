@@ -13,7 +13,7 @@ public partial class Cine : ContentPage
         InitializeComponent();
         Task cargandoEstrenos = CargarEstrenos();
     }
-
+    
     public async Task CargarEstrenos()
     {
         try
