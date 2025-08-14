@@ -3,10 +3,219 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Noticias"
              Title="Noticias">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Noticias del Uruguay"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="0,0,0,40" />
+
+            <Grid x:Name="gridNoticias" RowSpacing="15" ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame x:Name="frameNoticia1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia1" 
+                            Text="Noticia 1" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia1" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia1"
+                            Text="Descripción de la noticia 1" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frameNoticia2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia2" 
+                            Text="Noticia 2" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia2" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia2"
+                            Text="Descripción de la noticia 2" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace2"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frameNoticia3" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia3" 
+                            Text="Noticia 3" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia3" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia3"
+                            Text="Descripción de la noticia 3" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace3"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frameNoticia4" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia4" 
+                            Text="Noticia 4" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia4" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia4"
+                            Text="Descripción de la noticia 4" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace4"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frameNoticia5" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia5" 
+                            Text="Noticia 5" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia5" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia5"
+                            Text="Descripción de la noticia 5" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace5"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="frameNoticia6" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout>
+                        <Label x:Name="tituloNoticia6" 
+                            Text="Noticia 6" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Start" 
+                            TextColor="#cdd1d4" 
+                            FontSize="Medium"/>
+                        <Image x:Name="imagenNoticia6" 
+                            Aspect="AspectFill" 
+                            HeightRequest="150"
+                            WidthRequest="350"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Label x:Name="descripcionNoticia6"
+                            Text="Descripción de la noticia 6" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="End" 
+                            TextColor="#cdd1d4"
+                            FontSize="Small"/>
+                        <Label
+                            Text="Visita aqui la noticia real"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            TextColor="Yellow">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace6"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
