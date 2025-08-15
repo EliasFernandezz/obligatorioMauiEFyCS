@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 //
 //    var noticias = Noticias.FromJson(jsonString);
 
-namespace obligatorioMauiEFyCS
+namespace obligatorioMauiEFyCSNoticias
 {
     using System;
     using System.Collections.Generic;
@@ -122,12 +122,12 @@ namespace obligatorioMauiEFyCS
 
     public partial class Noticias
     {
-        public static Noticias FromJson(string json) => JsonConvert.DeserializeObject<Noticias>(json, obligatorioMauiEFyCS.Converter.Settings);
+        public static Noticias FromJson(string json) => JsonConvert.DeserializeObject<Noticias>(json, obligatorioMauiEFyCSNoticias.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Noticias self) => JsonConvert.SerializeObject(self, obligatorioMauiEFyCS.Converter.Settings);
+        public static string ToJson(this Noticias self) => JsonConvert.SerializeObject(self, obligatorioMauiEFyCSNoticias.Converter.Settings);
     }
 
     internal static class Converter

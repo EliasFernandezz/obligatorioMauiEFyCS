@@ -13,7 +13,7 @@ public partial class Cine : ContentPage
         InitializeComponent();
         Task cargandoEstrenos = CargarEstrenos();
     }
-    
+
     public async Task CargarEstrenos()
     {
         try
@@ -30,7 +30,7 @@ public partial class Cine : ContentPage
                     peliculas.PosterPath = "https://image.tmdb.org/t/p/w500" + peliculas.PosterPath;
                 }
 
-                listaOriginal = datos.Results.Take(14).ToList(); 
+                listaOriginal = datos.Results.Take(14).ToList();
                 EstrenosList.ItemsSource = listaOriginal;
             }
         }
@@ -67,7 +67,7 @@ public partial class Cine : ContentPage
         if (string.IsNullOrEmpty(generoPorUsuario))
         {
             EstrenosList.ItemsSource = listaOriginal; // si no hay texto o incluso una palabra o cualquier palabra que no este relacionada a un genero se muestra las peliculas sin filtrar
-            return; 
+            return;
         }
         await buscarEstrenosPorGeneroOPalabra(generoPorUsuario);
     }
@@ -79,12 +79,12 @@ public partial class Cine : ContentPage
 
         if (nombreIdDeGenero.TryGetValue(pPalabra, out long generoId))
         {
-            
+
             var peliculasFiltradas = listaOriginal.Where(pelicula => pelicula.GenreIds.Contains(generoId)).ToList();
 
             if (peliculasFiltradas.Count == 0)
             {
-                await DisplayAlert("Aviso", "No se encontraron estrenos de peliculas con el genero: " + pPalabra, "OK"); 
+                await DisplayAlert("Aviso", "No se encontraron estrenos de peliculas con el genero: " + pPalabra, "OK");
             }
 
             EstrenosList.ItemsSource = peliculasFiltradas;
@@ -106,7 +106,7 @@ public partial class Cine : ContentPage
         }
     }
 
-    
+
 
 }
 

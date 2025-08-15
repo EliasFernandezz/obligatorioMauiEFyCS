@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using obligatorioMauiEFyCSNoticias;
 using System.Threading.Tasks;
 
 namespace obligatorioMauiEFyCS;
@@ -81,7 +82,7 @@ public partial class Noticias : ContentPage
             var response = await client.GetAsync(url);
             if (!response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Error", "No se pudo obtener el clima.", "OK");
+                await DisplayAlert("Error", "No se pudo obtener las noticias.", "OK");
             }
 
             else

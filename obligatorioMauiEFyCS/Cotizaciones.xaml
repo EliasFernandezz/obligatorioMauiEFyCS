@@ -5,8 +5,77 @@
              Title="Cotizaciones">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Text="Cotizaciones frente al peso uruguayo"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             Style="{StaticResource Headline}"
+             SemanticProperties.HeadingLevel="Level1"
+             Margin="0,0,0,30" />
+
+
+        <Grid x:Name="gridCotizaciones" RowSpacing="25" Margin="5,50,5,50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="frameCotizacionDolar" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <HorizontalStackLayout>
+                    <Label 
+                    Text="Cotizacion del dolar" 
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4" 
+                    FontSize="Large">
+                    </Label>
+
+                    <Label x:Name="lblCotizacionDolar"
+                    Text="1 U$D → "
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4">
+                    </Label>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame x:Name="frameCotizacionEuro" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <HorizontalStackLayout>
+                    <Label 
+                    Text="Cotizacion del Euro" 
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4" 
+                    FontSize="Large"/>
+
+                    <Label x:Name="lblCotizacionEuro"
+                    Text="1 EUR → "
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4">
+                    </Label>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame x:Name="frameCotizacionReal" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
+                <HorizontalStackLayout>
+                    <Label 
+                    Text="Cotizacion del Real" 
+                    HorizontalOptions="Start" 
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4" 
+                    FontSize="Large"/>
+
+                    <Label x:Name="lblCotizacionReal"
+                    Text="1 BRL → "
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    TextColor="#cdd1d4">
+                    </Label>
+                </HorizontalStackLayout>
+            </Frame>
+        </Grid>
     </VerticalStackLayout>
+    
+    
 </ContentPage>
