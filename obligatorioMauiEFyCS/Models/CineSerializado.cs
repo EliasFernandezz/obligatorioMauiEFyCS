@@ -77,7 +77,7 @@ namespace QuickType
 
     public enum MediaType { Movie };
 
-    public enum OriginalLanguage { En, Zh };
+    public enum OriginalLanguage { En, Zh, Es, Fr };
 
     public partial class CineSerializado
     {
@@ -148,10 +148,10 @@ namespace QuickType
             var value = serializer.Deserialize<string>(reader);
             switch (value)
             {
-                case "en":
-                    return OriginalLanguage.En;
-                case "zh":
-                    return OriginalLanguage.Zh;
+                case "en": return OriginalLanguage.En;
+                case "zh": return OriginalLanguage.Zh;
+                case "es": return OriginalLanguage.Es;
+                case "fr": return OriginalLanguage.Fr;
             }
             throw new Exception("Cannot unmarshal type OriginalLanguage");
         }
