@@ -30,7 +30,7 @@ public partial class Cine : ContentPage
                     peliculas.PosterPath = "https://image.tmdb.org/t/p/w500" + peliculas.PosterPath;
                 }
 
-                listaOriginal = datos.Results.ToList(); 
+                listaOriginal = datos.Results.Take(14).ToList(); 
                 EstrenosList.ItemsSource = listaOriginal;
             }
         }
