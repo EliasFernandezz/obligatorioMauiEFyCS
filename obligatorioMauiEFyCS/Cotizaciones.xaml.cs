@@ -29,12 +29,13 @@ public partial class Cotizaciones : ContentPage
                 var json = await response.Content.ReadAsStringAsync();
                 cotizaciones = JsonConvert.DeserializeObject<CotizacionesModel>(json);
 
-                decimal usdUYU = Convert.ToDecimal(cotizaciones.Quotes["USDUYU"]);
-                decimal usdEUR = Convert.ToDecimal(cotizaciones.Quotes["USDEUR"]);
-                decimal usdBRL = Convert.ToDecimal(cotizaciones.Quotes["USDBRL"]);
+                double usdUYU = cotizaciones.Quotes["USDUYU"];
+                double usdEUR = cotizaciones.Quotes["USDEUR"];
+                double usdBRL = cotizaciones.Quotes["USDBRL"];
 
-                decimal brlUYU = usdUYU / usdBRL;               //En estas lineas, se calcula manualmente la cotizacion del real y el euro frente al peso uruguayo porque no se puede obtener directamente desde la API.
-                decimal eurUYU = usdUYU / usdEUR;
+                usdUYU = Math.Round(usdUYU, 2);
+                double brlUYU = Math.Round(usdUYU / usdBRL, 2);
+                double eurUYU = Math.Round(usdUYU / usdEUR, 2);
 
                 lblCotizacionDolar.Text += usdUYU;
                 lblCotizacionEuro.Text += eurUYU;
