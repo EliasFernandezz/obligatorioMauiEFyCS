@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuickType
+﻿namespace QuickType
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
+    using System;
+    using System.Globalization;
 
     public partial class CineSerializado
     {
@@ -77,7 +70,7 @@ namespace QuickType
 
     public enum MediaType { Movie };
 
-    public enum OriginalLanguage { En, Zh, Es, Fr };
+    public enum OriginalLanguage { En, Zh, Es, Fr, Other };
 
     public partial class CineSerializado
     {
@@ -152,6 +145,7 @@ namespace QuickType
                 case "zh": return OriginalLanguage.Zh;
                 case "es": return OriginalLanguage.Es;
                 case "fr": return OriginalLanguage.Fr;
+                default: return OriginalLanguage.Other; // esto para que acepte cualquier idioma que no se haya definido y no largue excepcion
             }
             throw new Exception("Cannot unmarshal type OriginalLanguage");
         }
