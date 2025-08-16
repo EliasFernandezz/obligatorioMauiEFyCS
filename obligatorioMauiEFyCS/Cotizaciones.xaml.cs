@@ -37,9 +37,9 @@ public partial class Cotizaciones : ContentPage
                 double brlUYU = Math.Round(usdUYU / usdBRL, 2);
                 double eurUYU = Math.Round(usdUYU / usdEUR, 2);
 
-                lblCotizacionDolar.Text += usdUYU;
-                lblCotizacionEuro.Text += eurUYU;
-                lblCotizacionReal.Text += brlUYU;
+                lblCotizacionDolar.Text += "$ " + usdUYU;
+                lblCotizacionEuro.Text += "$ " + eurUYU;
+                lblCotizacionReal.Text += "$ " + brlUYU;
             }
         }
     }

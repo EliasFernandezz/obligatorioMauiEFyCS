@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Cotizaciones"
-             Title="Cotizaciones"
-             BackgroundColor="#f4f8fb">
+             Title="Cotizaciones">
+    
     <VerticalStackLayout Padding="20,40,20,20" Spacing="20">
         <Label 
              Text="Cotizaciones frente al peso uruguayo"
@@ -12,7 +12,6 @@
              Style="{StaticResource Headline}"
              SemanticProperties.HeadingLevel="Level1"
              Margin="0,0,0,20"
-             TextColor="#1a2a36"
              FontAttributes="Bold"
              FontSize="28" />
 
@@ -26,61 +25,61 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#ffffff" BorderColor="#319aeb" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
                 <HorizontalStackLayout Spacing="10">
                     <Image Source="dolar.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
                     <Label 
-                        Text="Dólar estadounidense" 
-                        HorizontalOptions="StartAndExpand" 
+                        Text="Dólar estadounidense:     " 
+                        HorizontalOptions="Start" 
                         VerticalOptions="Center"
-                        TextColor="#319aeb" 
+                        TextColor="#cdd1d4" 
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                     <Label x:Name="lblCotizacionDolar"
                         Text="1 U$D → "
                         HorizontalOptions="End"
                         VerticalOptions="Center"
-                        TextColor="#1a2a36"
+                        TextColor="#cdd1d4"
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame x:Name="frameCotizacionEuro" Grid.Row="1" Grid.Column="0" BackgroundColor="#ffffff" BorderColor="#319aeb" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionEuro" Grid.Row="1" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
                 <HorizontalStackLayout Spacing="10">
                     <Image Source="euro.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
                     <Label 
-                        Text="Euro" 
-                        HorizontalOptions="StartAndExpand" 
+                        Text="Euro:     " 
+                        HorizontalOptions="Start" 
                         VerticalOptions="Center"
-                        TextColor="#319aeb" 
+                        TextColor="#cdd1d4" 
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                     <Label x:Name="lblCotizacionEuro"
                         Text="1 EUR → "
                         HorizontalOptions="End"
                         VerticalOptions="Center"
-                        TextColor="#1a2a36"
+                        TextColor="#cdd1d4"
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame x:Name="frameCotizacionReal" Grid.Row="2" Grid.Column="0" BackgroundColor="#ffffff" BorderColor="#319aeb" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionReal" Grid.Row="2" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
                 <HorizontalStackLayout Spacing="10">
                     <Image Source="real.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
                     <Label 
-                        Text="Real brasileño" 
-                        HorizontalOptions="StartAndExpand" 
+                        Text="Real brasileño:     " 
+                        HorizontalOptions="Start" 
                         VerticalOptions="Center"
-                        TextColor="#319aeb" 
+                        TextColor="#cdd1d4" 
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                     <Label x:Name="lblCotizacionReal"
                         Text="1 BRL → "
                         HorizontalOptions="End"
                         VerticalOptions="Center"
-                        TextColor="#1a2a36"
+                        TextColor="#cdd1d4"
                         FontSize="Medium"
                         FontAttributes="Bold"/>
                 </HorizontalStackLayout>
