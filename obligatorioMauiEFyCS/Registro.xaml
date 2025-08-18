@@ -9,6 +9,40 @@
             Style="{StaticResource Headline}"
             SemanticProperties.HeadingLevel="Level1"/>
 
+        <StackLayout Padding="30">
+            <Entry x:Name="NicknameEntry" Placeholder="Nickname" />
+            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
+            <Entry x:Name="NombreEntry" Placeholder="Nombre" />
+            <Entry x:Name="ApellidoEntry" Placeholder="Apellido"/>
+            <Entry x:Name="DireccionEntry" Placeholder="Direccion" />
+            <Entry x:Name="TelefonoEntry" Placeholder="Telefono" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" />
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button
+                    x:Name="btnTomarFoto"
+                    Text="Tomarse una foto" 
+                    SemanticProperties.Hint="Permite al usuario tomarse una foto"
+                    Clicked="btnTomarFoto_Clicked"
+                    HorizontalOptions="Fill" />
+                <Button
+                    x:Name="btnElegirFoto"
+                    Text="Elegir una foto" 
+                    SemanticProperties.Hint="Permite al usuario elegir una foto de su dispositivo"
+                    Clicked="btnElegirFoto_Clicked"
+                    HorizontalOptions="Fill" />
+            </HorizontalStackLayout>
+
+            <Button
+                    x:Name="btnRegistrarse"
+                    Text="Registrarse" 
+                    SemanticProperties.Hint="con este boton el usuario queda registrado en la aplicacion"
+                    Clicked="btnRegistrarse_Clicked"
+                    HorizontalOptions="Fill" />
+
+            <Label x:Name="ResultadoLabel" />
+        </StackLayout>
+
         <Button
                 x:Name="btnVolverALogin"
                 Text="volver al login"
