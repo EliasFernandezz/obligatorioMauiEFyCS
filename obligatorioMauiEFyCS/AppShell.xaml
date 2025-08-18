@@ -20,6 +20,11 @@
             Title="Ver patrocinadores"
             ContentTemplate="{DataTemplate local:VerPatrocinadores}"
             Route="VerPatrocinadores" />
+
+        <ShellContent
+            Title="Ver geolocalicación de patrocinadores"
+            ContentTemplate="{DataTemplate local:VerPatrocinadoresMapa}"
+            Route="VerPatrocinadoresMapa" />
     </FlyoutItem>
 
     <FlyoutItem Title="Clima">
