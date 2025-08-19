@@ -14,9 +14,10 @@ namespace obligatorioMauiEFyCS.DB_Models
         [PrimaryKey]
         [Required]
         [System.ComponentModel.DataAnnotations.MaxLength(20)]
-        public string nickname { get; set; }
+        public string Nickname { get; set; }
 
         [Required]
+        [Unique]
         [MinLength(8)]
         [System.ComponentModel.DataAnnotations.MaxLength(16)]
         public string Contrasena { get; set; }
@@ -39,6 +40,6 @@ namespace obligatorioMauiEFyCS.DB_Models
         public string Email { get; set; }
 
         [Required]
-        public byte[]  fotoPerfil { get; set; }
+        public byte[]  FotoPerfil { get; set; }
     }
 }

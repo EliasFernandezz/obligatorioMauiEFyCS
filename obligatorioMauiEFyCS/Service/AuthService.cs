@@ -32,13 +32,12 @@ namespace obligatorioMauiEFyCS.Service
         }
 
 
-        public async Task<Usuario> LoginUusuarioAsync(Usuario usuario)
+        public async Task LoginUsuarioAsync(Usuario usuario)
         {
-            var user = await dbConexion.Table<Usuario>().FirstOrDefaultAsync(u => u.Nombre == usuario.Nombre && u.Contrasena == usuario.Contrasena);
-            return user;
+            await dbConexion.Table<Usuario>().FirstOrDefaultAsync(u => u.Nombre == usuario.Nombre && u.Contrasena == usuario.Contrasena);
         }
 
-        public async Task<bool> EsRegistroUsuarioValidoAsync(Usuario usuario)
+        public async Task<bool> EsLoginUsuarioValidoAsync(Usuario usuario)
         {
             var user = await dbConexion.Table<Usuario>().FirstOrDefaultAsync(u => u.Nombre == usuario.Nombre || u.Contrasena == usuario.Contrasena);
 
