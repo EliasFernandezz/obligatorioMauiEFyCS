@@ -1,6 +1,8 @@
-using obligatorioMauiEFyCS.Service;
-using obligatorioMauiEFyCS.DB_Models;
 using Microsoft.Extensions.DependencyInjection;
+using obligatorioMauiEFyCS.DB_Models;
+using obligatorioMauiEFyCS.Service;
+using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
 using System.Threading.Tasks;
 
 
@@ -52,6 +54,38 @@ public partial class Login : ContentPage
         catch (Exception ex)
         {
             await DisplayAlert("Error", "Los datos ingresados son invalidos", "Cerrar");
+        }
+    }
+
+    private async void btnLoginHuella_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var request = new AuthenticationRequestConfiguration("Inicio de sesión", "pon tu huella");
+
+            var resul = await CrossFingerprint.Current.AuthenticateAsync(request);
+
+            if (resul.Authenticated)
+            {
+                var hayPrimerUsuario = await _authService.LoginUsuarioHuellaAsync();
+
+                if (hayPrimerUsuario)
+                {
+                    await Shell.Current.GoToAsync("//MainPage");
+                }
+                else
+                {
+                    await DisplayAlert("Error de autenticacion", "No hay usuarios registrados", "cerrar");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Error", "Este dispositivo no tiene huella dactilar", "cerrar");
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", "Ha ocurrido un error inesperado", "cerrar");
         }
     }
 }

@@ -46,5 +46,17 @@ namespace obligatorioMauiEFyCS.Service
 
             else return true;
         }
+
+        public async Task<bool> LoginUsuarioHuellaAsync()
+        {
+            var primerUsuario = await dbConexion.Table<Usuario>().FirstOrDefaultAsync();
+            if (primerUsuario != null)
+            {
+                SesionUsuario.Instance.Nickname = primerUsuario.Nickname;
+                SesionUsuario.Instance.FotoPerfil = primerUsuario.FotoPerfil;
+                return true;
+            }
+            else return false;
+        }
     }
 }

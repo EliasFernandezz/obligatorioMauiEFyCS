@@ -20,8 +20,16 @@
                     SemanticProperties.Hint="con este boton el usuario puede iniciar sesiòn en la aplicacion"
                     Clicked="btnLogin_Clicked"
                     HorizontalOptions="Center" 
+                    Margin="0,0,0,10"/>
+
+            <Button
+                    x:Name="btnLoginHuella"
+                    Text="¿Usas huella dactilar? ¡Inicia sesión con ella!" 
+                    SemanticProperties.Hint="con este boton el usuario puede iniciar sesiòn usando una huella dactilar. por defecto se inicia sesion como el primer usario encontrado en la BDD"
+                    Clicked="btnLoginHuella_Clicked"
+                    HorizontalOptions="Center" 
                     Margin="0,0,0,25"/>
-            
+
             <Button
                     x:Name="btnIrARegistro"
                     Text="No tienes una cuenta? Registrate"
