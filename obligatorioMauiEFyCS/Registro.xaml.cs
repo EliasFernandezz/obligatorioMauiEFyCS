@@ -1,6 +1,7 @@
 using obligatorioMauiEFyCS.Service;
 using obligatorioMauiEFyCS.DB_Models;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 namespace obligatorioMauiEFyCS;
 
 
@@ -17,9 +18,9 @@ public partial class Registro : ContentPage
         _authService = new AuthService();
     }
 
-    private void VolverALogin_Clicked(object sender, EventArgs e)
+    private async void VolverALogin_Clicked(object sender, EventArgs e)
     {
-		Navigation.PopAsync(); 
+		await Shell.Current.GoToAsync("//Login");
     }
 
     private async void btnTomarElegirFoto_Clicked(object sender, EventArgs e)
@@ -83,6 +84,8 @@ public partial class Registro : ContentPage
             Preferences.Set($"{NicknameEntry}_prefVerCine", true);
             Preferences.Set($"{NicknameEntry}_prefVerPatrocinadores", true);
             Preferences.Set($"{NicknameEntry}_prefGestionarPatrocinadores", true);
+
+            await Shell.Current.GoToAsync("//MainPage");
         }
         catch (Exception ex)
         {

@@ -23,9 +23,9 @@ public partial class Login : ContentPage
         await _authService.InitializeDatabaseAsync();
     }
 
-    private void IrARegistro_Clicked(object sender, EventArgs e)
+    private async void IrARegistro_Clicked(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new Registro());
+        await Shell.Current.GoToAsync("//Registro");
     }
 
     private async void btnLogin_Clicked(object sender, EventArgs e)
@@ -39,11 +39,10 @@ public partial class Login : ContentPage
             };
             bool esLoginValido = await _authService.EsLoginUsuarioValidoAsync(usuario);
 
-            if (esLoginValido)
+            if (esLoginValido == true)
             {
-                await _authService.LoginUsuarioAsync(usuario);
-                SesionUsuario.Instance.Nickname = usuario.Nickname;
-                SesionUsuario.Instance.FotoPerfil = usuario.FotoPerfil;
+                _authService.LoginUsuarioAsync(usuario);
+                await Shell.Current.GoToAsync("//MainPage");
             }
             else
             {
