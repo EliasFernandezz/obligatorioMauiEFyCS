@@ -6,9 +6,25 @@
     xmlns:local="clr-namespace:obligatorioMauiEFyCS">
 
     <ShellContent
-        Title="Home"
+        Title="Login"
         ContentTemplate="{DataTemplate local:Login}"
-        Route="Login" />
+        Route="Login"
+        Shell.NavBarIsVisible="False"
+        Shell.FlyoutItemIsVisible="False" />
+
+    <ShellContent
+        Title="Registro"
+        ContentTemplate="{DataTemplate local:Registro}"
+        Route="Registro"
+        Shell.NavBarIsVisible="False"
+        Shell.FlyoutItemIsVisible="False" />
+
+    <FlyoutItem Title="Pagina Principal">
+        <ShellContent
+            Title="¡Bienvenido!"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
 
     <FlyoutItem Title="Patrocinadores">
         <ShellContent

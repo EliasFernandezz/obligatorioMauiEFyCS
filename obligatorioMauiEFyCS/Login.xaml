@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Login"
+             NavigationPage.HasNavigationBar="False"
              Title="Login">
     <VerticalStackLayout>
         <Label 
@@ -9,11 +10,32 @@
             Style="{StaticResource Headline}"
             SemanticProperties.HeadingLevel="Level1" />
 
-        <Button
-                x:Name="btnIrARegistro"
-                Text="No tienes una cuenta? Registrate"
-                SemanticProperties.Hint="ir al registro cuando se toca este boton"
-                Clicked="IrARegistro_Clicked"
-                HorizontalOptions="Fill" />
+        <StackLayout Padding="30" Spacing="10" HorizontalOptions="Center">
+            <Entry x:Name="NicknameEntry" Placeholder="Nickname" />
+            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
+
+            <Button
+                    x:Name="btnLogin"
+                    Text="Iniciar sesiòn" 
+                    SemanticProperties.Hint="con este boton el usuario puede iniciar sesiòn en la aplicacion"
+                    Clicked="btnLogin_Clicked"
+                    HorizontalOptions="Center" 
+                    Margin="0,0,0,10"/>
+
+            <Button
+                    x:Name="btnLoginHuella"
+                    Text="¿Usas huella dactilar? ¡Inicia sesión con ella!" 
+                    SemanticProperties.Hint="con este boton el usuario puede iniciar sesiòn usando una huella dactilar. por defecto se inicia sesion como el primer usario encontrado en la BDD"
+                    Clicked="btnLoginHuella_Clicked"
+                    HorizontalOptions="Center" 
+                    Margin="0,0,0,25"/>
+
+            <Button
+                    x:Name="btnIrARegistro"
+                    Text="No tienes una cuenta? Registrate"
+                    SemanticProperties.Hint="ir al registro cuando se toca este boton"
+                    Clicked="IrARegistro_Clicked"/>
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
