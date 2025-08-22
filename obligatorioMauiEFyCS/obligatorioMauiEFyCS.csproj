@@ -85,6 +85,9 @@
 	  <MauiXaml Update="Noticias.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Preferencias.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Registro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

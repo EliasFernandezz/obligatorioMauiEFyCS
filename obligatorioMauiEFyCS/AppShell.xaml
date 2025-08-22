@@ -4,6 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:obligatorioMauiEFyCS">
+    
+    
 
     <ShellContent
         Title="Login"
@@ -21,45 +23,52 @@
 
     <FlyoutItem Title="Pagina Principal">
         <ShellContent
-            Title="¡Bienvenido!"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Patrocinadores">
+    <FlyoutItem Title="Preferencias">
         <ShellContent
+            ContentTemplate="{DataTemplate local:Preferencias}"
+            Route="Preferencias" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Patrocinadores"  x:Name="fyPatrocinadores">
+        <ShellContent
+            x:Name="fyGestionarPatrocinadores"
             Title="Gestionar patrocinadores"
             ContentTemplate="{DataTemplate local:GestionarPatrocinadores}"
             Route="GestionarPatrocinadores" />
 
         <ShellContent
+            x:Name="fyVerPatrocinadores"
             Title="Ver patrocinadores"
             ContentTemplate="{DataTemplate local:VerPatrocinadores}"
             Route="VerPatrocinadores" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Clima">
+    <FlyoutItem Title="Clima" x:Name="fyClima">
         <ShellContent
             Title="Clima actual y pronostico"
             ContentTemplate="{DataTemplate local:Clima}"
             Route="Clima" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Cotizaciones">
+    <FlyoutItem Title="Cotizaciones" x:Name="fyCotizaciones">
         <ShellContent
             Title="Cotizacion frente a peso uruguayo"
             ContentTemplate="{DataTemplate local:Cotizaciones}"
             Route="Cotizaciones" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Noticias">
+    <FlyoutItem Title="Noticias" x:Name="fyNoticias">
         <ShellContent
             Title="Noticias actuales de Uruguay"
             ContentTemplate="{DataTemplate local:Noticias}"
             Route="Noticias" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Cine">
+    <FlyoutItem Title="Cine" x:Name="fyCine">
         <ShellContent
             Title="Proximos estrenos"
             ContentTemplate="{DataTemplate local:Cine}"
