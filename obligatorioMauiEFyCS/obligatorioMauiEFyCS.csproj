@@ -60,6 +60,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.100" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Plugin.Fingerprint" Version="2.1.5" />
 		<PackageReference Include="RestSharp" Version="112.1.0" />
@@ -69,6 +70,9 @@
 	<ItemGroup>
 	  <Compile Update="EliminarPatrocinadores.xaml.cs">
 	    <DependentUpon>EliminarPatrocinadores.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="VerPatrocinadoresMapa.xaml.cs">
+	    <DependentUpon>VerPatrocinadoresMapa.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -89,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="EliminarPatrocinadores.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VerPatrocinadoresMapa.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Noticias.xaml">

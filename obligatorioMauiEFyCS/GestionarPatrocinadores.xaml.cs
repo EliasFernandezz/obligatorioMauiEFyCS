@@ -11,7 +11,15 @@ public partial class GestionarPatrocinadores : ContentPage
         InitializeComponent();
         string dbPath = Path.Combine(FileSystem.AppDataDirectory, "patrocinadores.db");
         _service = new PatrocinadorService(dbPath);
+        MessagingCenter.Subscribe<VerPatrocinadoresMapa, Location>(this, "UbicacionSeleccionada", (sender, loc) =>
+        {
+            ubicacionDelPatrocinador.Text = $"{loc.Latitude},{loc.Longitude}";
+        });
+    }
 
+    private async void OnClickSeleccionarUbicacion(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new VerPatrocinadoresMapa());
     }
 
     public async void OnClickCrearPatrocinador(object sender, EventArgs e)
