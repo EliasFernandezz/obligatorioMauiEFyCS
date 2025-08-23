@@ -22,6 +22,11 @@
             Route="VerPatrocinadores" />
 
         <ShellContent
+            Title="Eliminar patrocinadores"
+            ContentTemplate="{DataTemplate local:EliminarPatrocinador}"
+            Route="EliminarPatrocinador" />
+
+        <ShellContent
             Title="Ver geolocalicación de patrocinadores"
             ContentTemplate="{DataTemplate local:VerPatrocinadoresMapa}"
             Route="VerPatrocinadoresMapa" />

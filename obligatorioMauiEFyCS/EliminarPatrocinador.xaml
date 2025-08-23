@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="obligatorioMauiEFyCS.EliminarPatrocinador"
+             Title="Eliminación de patrocinador">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <BoxView HeightRequest="1" Color="Gray" HorizontalOptions="Fill"></BoxView>
+            <Frame CornerRadius="15"
+                   HasShadow="True"
+                   Padding="20"
+                   BackgroundColor="DodgerBlue"
+                   HeightRequest="180">
+
+
+                <VerticalStackLayout Spacing="15">
+                    <Entry x:Name="idPatrocinador" Placeholder="Ingrese el id del patrocinador" PlaceholderColor="Black" Keyboard="Numeric" TextColor="Black"/>
+                    <Button Text="Eliminar patrocinador" BackgroundColor="CadetBlue" TextColor="Black" Clicked="OnClickEliminarPatrocinador"/>
+                    
+                </VerticalStackLayout>
+
+
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -68,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="EliminarPatrocinador.xaml.cs">
+	    <DependentUpon>EliminarPatrocinador.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="VerPatrocinadoresMapa.xaml.cs">
 	    <DependentUpon>VerPatrocinadoresMapa.xaml</DependentUpon>
 	  </Compile>
@@ -87,6 +90,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="EliminarPatrocinador.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="VerPatrocinadoresMapa.xaml">
