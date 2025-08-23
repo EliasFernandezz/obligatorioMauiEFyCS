@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Maps;
 
 namespace obligatorioMauiEFyCS
 {
@@ -9,6 +11,7 @@ namespace obligatorioMauiEFyCS
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
