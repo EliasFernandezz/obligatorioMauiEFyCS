@@ -11,8 +11,8 @@
             SemanticProperties.HeadingLevel="Level1" />
 
         <StackLayout Padding="30" Spacing="10" HorizontalOptions="Center">
-            <Entry x:Name="NicknameEntry" Placeholder="Nickname" />
-            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
+            <Entry x:Name="NicknameEntry" Placeholder="Nickname" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
+            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c" IsPassword="True" />
 
             <Button
                     x:Name="btnLogin"
