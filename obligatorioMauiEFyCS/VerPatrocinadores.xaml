@@ -2,11 +2,67 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.VerPatrocinadores"
-             Title="VerPatrocinadores">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+             Title="Ver patrocinadores">
+    <ScrollView>
+        <CollectionView x:Name="patrocinadoresListView">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10">
+
+                        <Frame CornerRadius="20"
+                            HasShadow="True"
+                            Padding="15"
+                            BackgroundColor="Cyan"
+                            BorderColor="Blue">
+
+                            <VerticalStackLayout Spacing="10">
+
+                                <Label Text="{Binding id}" 
+                                    FontSize="20" 
+                                    FontAttributes="Bold" 
+                                    TextColor="#333"
+                                    HorizontalOptions="Center" />
+
+
+                                <Label Text="{Binding nombre}" 
+                                    FontSize="20" 
+                                    FontAttributes="Bold" 
+                                    TextColor="#333"
+                                    HorizontalOptions="Center" />
+
+
+                                <BoxView HeightRequest="1" 
+                                    Color="Black" 
+                                    HorizontalOptions="Fill" />
+
+
+                                <Label Text="{Binding direccion}" 
+                                    FontSize="14" 
+                                    TextColor="Black"
+                                    HorizontalOptions="Center" />
+
+
+                                <BoxView HeightRequest="1" 
+                                    Color="Black" 
+                                    HorizontalOptions="Fill" />
+
+
+                                <Image Source="{Binding logo}" 
+                                    HeightRequest="60" 
+                                    WidthRequest="80"
+                                    Aspect="AspectFit"
+                                    HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </ScrollView>
+</ContentPage> 

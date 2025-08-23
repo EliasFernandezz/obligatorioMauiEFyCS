@@ -36,6 +36,11 @@
             Title="Ver patrocinadores"
             ContentTemplate="{DataTemplate local:VerPatrocinadores}"
             Route="VerPatrocinadores" />
+
+        <ShellContent
+            Title="Eliminar patrocinadores"
+            ContentTemplate="{DataTemplate local:EliminarPatrocinadores}"
+            Route="EliminarPatrocinadores" />
     </FlyoutItem>
 
     <FlyoutItem Title="Clima">
