@@ -23,8 +23,7 @@
 	   android:allowBackup="true"
 	   android:icon="@mipmap/appicon"
 	   android:label="TuApp"
-	   android:supportsRtl="true"
-	   android:debuggable="true">
+	   android:supportsRtl="true">
 
 		<!-- API Key de Google Maps -->
 		<meta-data
