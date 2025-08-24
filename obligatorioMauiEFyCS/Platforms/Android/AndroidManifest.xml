@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.obligatoriomauiefycs">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true"></application>
+	
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -23,7 +23,8 @@
 	   android:allowBackup="true"
 	   android:icon="@mipmap/appicon"
 	   android:label="TuApp"
-	   android:supportsRtl="true">
+	   android:supportsRtl="true"
+	   android:debuggable="true">
 
 		<!-- API Key de Google Maps -->
 		<meta-data
