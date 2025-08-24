@@ -11,16 +11,17 @@ namespace obligatorioMauiEFyCS
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-<<<<<<< HEAD
                 .UseMauiCommunityToolkitMediaElement()
-=======
-                .UseMauiMaps()
->>>>>>> featureGestionYMapaPatrocinadores
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            if (DeviceInfo.Current.Idiom == DeviceIdiom.Phone)
+            {
+                builder.UseMauiMaps();
+            }
 
             builder.Services.AddSingleton<AuthService>();
 
