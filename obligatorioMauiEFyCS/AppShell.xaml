@@ -27,7 +27,7 @@
             Route="MainPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Preferencias">
+    <FlyoutItem Title="Preferencias"> 
         <ShellContent
             ContentTemplate="{DataTemplate local:Preferencias}"
             Route="Preferencias" />

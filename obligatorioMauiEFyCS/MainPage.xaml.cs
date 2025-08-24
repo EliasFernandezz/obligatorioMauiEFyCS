@@ -13,7 +13,7 @@ namespace obligatorioMauiEFyCS
             byte[] fotoPerfil = SesionUsuario.Instance.FotoPerfil;
             string nickname = SesionUsuario.Instance.Nickname;
 
-            lblBienvenida.Text = $"Hola {nickname}! disfruta de los servicios que se ofrecen en esta aplicacion ";
+            lblBienvenida.Text = $"¡Hola {nickname}! disfruta de los servicios que se ofrecen en esta aplicacion ";
 
             if (fotoPerfil != null)
             {
@@ -25,6 +25,14 @@ namespace obligatorioMauiEFyCS
             {
                 imgFotoPerfil.Source = "foto_perfil_por_defecto.png"; // Imagen por defecto si no hay foto
             }
+        }
+
+        private async void btnCerrarSesion_Clicked(object sender, EventArgs e)
+        {
+            SesionUsuario.Instance.Nickname = null;
+            SesionUsuario.Instance.FotoPerfil = null;
+
+            await Shell.Current.GoToAsync("//Login");
         }
     }
 

@@ -4,46 +4,64 @@
              x:Class="obligatorioMauiEFyCS.Registro"
              NavigationPage.HasNavigationBar="False"
              Title="Registro">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <ScrollView>
-        <VerticalStackLayout>
-        <Label 
-                    Text="Registrate"
-                    Style="{StaticResource Headline}"
-                    SemanticProperties.HeadingLevel="Level1"/>
+        <VerticalStackLayout Margin="0,150,0,0">
+
+            <Label 
+             Text="Registrate"
+             Style="{StaticResource Headline}"
+             SemanticProperties.HeadingLevel="Level1"
+             Margin="60,0,0,0"/>
+
 
             <StackLayout Padding="30" Spacing="10" HorizontalOptions="Center">
-                <Entry x:Name="NicknameEntry" Placeholder="Nickname" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Label Text="La contraseña debe tener entre 8 y 16 caracteres"
-                               FontSize="12"
-                               TextColor="#2f47c3"
-                               Margin="0,0,0,5"/>
-                <Entry x:Name="NombreEntry" Placeholder="Nombre" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Entry x:Name="ApellidoEntry" Placeholder="Apellido" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Entry x:Name="DireccionEntry" Placeholder="Direccion" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Entry x:Name="TelefonoEntry" Placeholder="Telefono" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-                <Entry x:Name="EmailEntry" Placeholder="Email" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
 
-                <Button
-                            x:Name="btnTomarElegirFoto"
-                            Text="Ponte una foto de perfil" 
-                            SemanticProperties.Hint="Permite al usuario elegir entre tomarse una foto o elegir una del dispositivo"
-                            Clicked="btnTomarElegirFoto_Clicked"
-                            Margin="0,0,0,25"/>
+                    <Entry x:Name="NicknameEntry" Placeholder="Nickname"/>
+                    <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True"/>
+                
+                    <Label Text="La contraseña debe tener entre 8 y 16 caracteres"
+                                       FontSize="12"
+                                       TextColor="#939ef5"
+                                       Margin="0,0,0,5"
+                     />
+                
+                    <Entry x:Name="NombreEntry" Placeholder="Nombre"/>
+                    <Entry x:Name="ApellidoEntry" Placeholder="Apellido"/>
+                    <Entry x:Name="DireccionEntry" Placeholder="Direccion"/>
+                    <Entry x:Name="TelefonoEntry" Placeholder="Telefono"/>
+                    <Entry x:Name="EmailEntry" Placeholder="Email"/>
 
-                <Button
-                            x:Name="btnRegistrarse"
-                            Text="Registrarse" 
-                            SemanticProperties.Hint="con este boton el usuario queda registrado en la aplicacion"
-                            Clicked="btnRegistrarse_Clicked"
-                            HorizontalOptions="Center" />
+                    <Button
+                                    x:Name="btnTomarElegirFoto"
+                                    Text="Ponte una foto de perfil" 
+                                    SemanticProperties.Hint="Permite al usuario elegir entre tomarse una foto o elegir una del dispositivo"
+                                    Clicked="btnTomarElegirFoto_Clicked"
+                                    Margin="0,0,0,25"
+                    />
 
-                <Button
-                            x:Name="btnVolverALogin"
-                            Text="volver al login"
-                            SemanticProperties.Hint="para volver al login"
-                            Clicked="VolverALogin_Clicked"
-                            HorizontalOptions="Center" />
+                    <Button
+                                    x:Name="btnRegistrarse"
+                                    Text="Registrarse" 
+                                    SemanticProperties.Hint="con este boton el usuario queda registrado en la aplicacion"
+                                    Clicked="btnRegistrarse_Clicked"
+                                    HorizontalOptions="Center"
+                    />
+
+                    <Button
+                                    x:Name="btnVolverALogin"
+                                    Text="volver al login"
+                                    SemanticProperties.Hint="para volver al login"
+                                    Clicked="VolverALogin_Clicked"
+                                    HorizontalOptions="Center"
+                    />
             </StackLayout>
 
         </VerticalStackLayout>

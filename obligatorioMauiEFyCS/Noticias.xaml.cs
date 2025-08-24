@@ -104,44 +104,46 @@ public partial class Noticias : ContentPage
                 imagenNoticia5.Source = noticias.Results[4].ImageUrl;
                 imagenNoticia6.Source = noticias.Results[5].ImageUrl;
 
-                descripcionNoticia1.Text = noticias.Results[0].Description;
-                descripcionNoticia2.Text = noticias.Results[1].Description;
-                descripcionNoticia3.Text = noticias.Results[2].Description;
-                descripcionNoticia4.Text = noticias.Results[3].Description;
-                descripcionNoticia5.Text = noticias.Results[4].Description;
-                descripcionNoticia6.Text = noticias.Results[5].Description;
+                descripcionNoticia1.Text = noticias.Results[0].Description + "...";
+                descripcionNoticia2.Text = noticias.Results[1].Description + "...";
+                descripcionNoticia3.Text = noticias.Results[2].Description + "...";
+                descripcionNoticia4.Text = noticias.Results[3].Description + "...";
+                descripcionNoticia5.Text = noticias.Results[4].Description + "...";
+                descripcionNoticia6.Text = noticias.Results[5].Description + "...";
 
             }
         }
 
     }
 
-    private async void TapGestureRecognizer_Enlace1(object sender, TappedEventArgs e)
+
+
+
+    private async void btnEnlace1_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[0].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }
 
-    private async void TapGestureRecognizer_Enlace2(object sender, TappedEventArgs e)
+    private async void btnEnlace2_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[1].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }
 
-    private async void TapGestureRecognizer_Enlace3(object sender, TappedEventArgs e)
+    private async void btnEnlace3_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[2].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }
 
-    private async void TapGestureRecognizer_Enlace4(object sender, TappedEventArgs e)
+    private async void btnEnlace4_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[3].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }
 
-    private async void TapGestureRecognizer_Enlace5(object sender, TappedEventArgs e)
+    private async void btnEnlace5_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[4].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }
-
-    private async void TapGestureRecognizer_Enlace6(object sender, TappedEventArgs e)
+    private async void btnEnlace6_Clicked(object sender, EventArgs e)
     {
         await Browser.Default.OpenAsync(noticias.Results[5].SourceUrl, BrowserLaunchMode.SystemPreferred);
     }

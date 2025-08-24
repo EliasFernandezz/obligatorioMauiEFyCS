@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Clima"
              Title="Clima Actual de Punta del Este:">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ScrollView>
         
         <VerticalStackLayout Padding="20" Spacing="20">
@@ -14,7 +22,7 @@
                     HeightRequest="210"
                     WidthRequest="810"/>
 
-                <Frame CornerRadius="12" HasShadow="True" Padding="15" BackgroundColor="White" HeightRequest="200" WidthRequest="800">
+                <Frame CornerRadius="12" HasShadow="True" Padding="15" BackgroundColor="#55000000" HeightRequest="200" WidthRequest="800">
 
                     <Grid>
 
@@ -61,7 +69,7 @@
                     <DataTemplate>
                         
                         <Frame Padding="10"
-                            BackgroundColor="LightBlue"
+                            BackgroundColor="#33000000"
                             CornerRadius="12"
                             WidthRequest="200"
                             HeightRequest="185"

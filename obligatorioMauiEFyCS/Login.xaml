@@ -4,15 +4,24 @@
              x:Class="obligatorioMauiEFyCS.Login"
              NavigationPage.HasNavigationBar="False"
              Title="Login">
-    <VerticalStackLayout>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Margin="0,150,0,0">
         <Label 
             Text="Iniciar sesión"
             Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1" />
+            SemanticProperties.HeadingLevel="Level1" 
+            Margin="60,0,0,0"/>
 
         <StackLayout Padding="30" Spacing="10" HorizontalOptions="Center">
-            <Entry x:Name="NicknameEntry" Placeholder="Nickname" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c"/>
-            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" BackgroundColor="#c9cfd6" PlaceholderColor="#49699c" IsPassword="True" />
+            <Entry x:Name="NicknameEntry" Placeholder="Nickname"/>
+            <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
 
             <Button
                     x:Name="btnLogin"

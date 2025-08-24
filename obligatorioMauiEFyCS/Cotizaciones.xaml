@@ -3,7 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Cotizaciones"
              Title="Cotizaciones">
-    
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <VerticalStackLayout Padding="20,40,20,20" Spacing="20">
         <Label 
              Text="Cotizaciones frente al peso uruguayo"
@@ -15,7 +22,7 @@
              FontAttributes="Bold"
              FontSize="28" />
 
-        <Grid x:Name="gridCotizaciones" RowSpacing="20" ColumnSpacing="20" Margin="0,0,0,0">
+        <Grid x:Name="gridCotizaciones" RowSpacing="20" ColumnSpacing="20"  HorizontalOptions="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
                 <RowDefinition Height="80" />
@@ -25,9 +32,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="Black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
                 <HorizontalStackLayout Spacing="10">
-                    <Image Source="dolar.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
+                    <Image Source="usa.png" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
                     <Label 
                         Text="Dólar estadounidense:     " 
                         HorizontalOptions="Start" 
@@ -45,9 +52,9 @@
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame x:Name="frameCotizacionEuro" Grid.Row="1" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionEuro" Grid.Row="1" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
                 <HorizontalStackLayout Spacing="10">
-                    <Image Source="euro.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
+                    <Image Source="europa.png" HeightRequest="40" WidthRequest="80" VerticalOptions="Center"/>
                     <Label 
                         Text="Euro:     " 
                         HorizontalOptions="Start" 
@@ -65,9 +72,9 @@
                 </HorizontalStackLayout>
             </Frame>
 
-            <Frame x:Name="frameCotizacionReal" Grid.Row="2" Grid.Column="0" BackgroundColor="#319aeb" BorderColor="black" CornerRadius="16" Padding="10" HasShadow="True" Margin="0,0,0,0">
+            <Frame x:Name="frameCotizacionReal" Grid.Row="2" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
                 <HorizontalStackLayout Spacing="10">
-                    <Image Source="real.png" HeightRequest="32" WidthRequest="32" VerticalOptions="Center"/>
+                    <Image Source="brasil.png" HeightRequest="40" WidthRequest="80" VerticalOptions="Center"/>
                     <Label 
                         Text="Real brasileño:     " 
                         HorizontalOptions="Start" 
