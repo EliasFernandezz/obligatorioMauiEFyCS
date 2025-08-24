@@ -41,7 +41,7 @@ public partial class Registro : ContentPage
             if (foto != null)
             {
                 var stream = await foto.OpenReadAsync();
-                fotoAGuardar = await ConvertStreamToByteArray(stream);
+                fotoAGuardar = await ConvertirStreamAArrayDeBytes(stream);
 
                 // Aquí puedes procesar el stream como desees
             }
@@ -52,7 +52,7 @@ public partial class Registro : ContentPage
         }
     }
 
-    private async Task<byte[]> ConvertStreamToByteArray(Stream stream)
+    private async Task<byte[]> ConvertirStreamAArrayDeBytes(Stream stream)
     {
         using (var memoryStream = new MemoryStream())
         {

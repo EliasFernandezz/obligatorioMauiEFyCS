@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Noticias"
              Title="Noticias">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <ScrollView>
         <VerticalStackLayout>
             <Label 
@@ -24,8 +32,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Frame x:Name="frameNoticia1" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia1" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia1" 
                             Text="Noticia 1" 
                             HorizontalOptions="Center" 
@@ -39,25 +47,23 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia1"
-                            Text="Descripción de la noticia 1" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace1"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace1"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace1_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frameNoticia2" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia2" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia2" 
                             Text="Noticia 2" 
                             HorizontalOptions="Center" 
@@ -71,25 +77,23 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia2"
-                            Text="Descripción de la noticia 2" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace2"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace2"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace2_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frameNoticia3" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia3" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia3" 
                             Text="Noticia 3" 
                             HorizontalOptions="Center" 
@@ -103,25 +107,23 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia3"
-                            Text="Descripción de la noticia 3" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace3"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace3"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace3_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frameNoticia4" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia4" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia4" 
                             Text="Noticia 4" 
                             HorizontalOptions="Center" 
@@ -135,25 +137,23 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia4"
-                            Text="Descripción de la noticia 4" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace4"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace4"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace4_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frameNoticia5" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia5" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia5" 
                             Text="Noticia 5" 
                             HorizontalOptions="Center" 
@@ -167,25 +167,23 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia5"
-                            Text="Descripción de la noticia 5" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace5"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace5"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace5_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="frameNoticia6" BackgroundColor="#319aeb" BorderColor="Black" Padding="5" Margin="5">
-                    <StackLayout>
+                <Frame x:Name="frameNoticia6" BackgroundColor="#44000000" BorderColor="Black" Padding="5" Margin="5">
+                    <StackLayout Spacing="20">
                         <Label x:Name="tituloNoticia6" 
                             Text="Noticia 6" 
                             HorizontalOptions="Center" 
@@ -199,20 +197,18 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
                         <Label x:Name="descripcionNoticia6"
-                            Text="Descripción de la noticia 6" 
                             HorizontalOptions="Center" 
                             VerticalOptions="End" 
                             TextColor="#cdd1d4"
-                            FontSize="Small"/>
-                        <Label
+                            FontSize="Small"
+                            MaxLines="4"/>
+                        <Button
+                            x:Name="btnEnlace6"
                             Text="Visita aqui la noticia real"
                             HorizontalOptions="Center"
                             VerticalOptions="End"
-                            TextColor="Yellow">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Enlace6"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                            Clicked="btnEnlace6_Clicked">
+                        </Button>
                     </StackLayout>
                 </Frame>
             </Grid>

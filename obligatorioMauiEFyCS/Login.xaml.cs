@@ -18,6 +18,15 @@ public partial class Login : ContentPage
 		InitializeComponent();
 		_authService = new AuthService();
         InitializeDatabase();
+
+        if (DeviceInfo.Idiom == DeviceIdiom.Phone)
+        {
+            btnLoginHuella.IsVisible = true;
+        }
+        else
+        {
+            btnLoginHuella.IsVisible = false;
+        }
     }
 
     private async void InitializeDatabase()

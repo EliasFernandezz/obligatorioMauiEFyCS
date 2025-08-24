@@ -3,11 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.Cine"
              Title="Peliculas de estreno">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
     <ScrollView>
         <VerticalStackLayout>
             <BoxView HeightRequest="1" Color="Gray" HorizontalOptions="Fill"></BoxView>
-            <Entry x:Name="GeneroEntry" Placeholder="Escribí el género o palabra clave" PlaceholderColor="Black"/>
-            <Button Text="Buscar por genero" Clicked="OnFiltrarPeliculasPorGeneroYPalabra" />
+            <Entry x:Name="GeneroEntry" Placeholder="Escribí el género o palabra clave" Margin="25,25,0,25" HorizontalOptions="Start" WidthRequest="450"/>
+            <Button Text="Buscar por genero" Clicked="OnFiltrarPeliculasPorGeneroYPalabra" HorizontalOptions="Start" Margin="25,0,0,0"/>
 
             <CollectionView x:Name="EstrenosList">
                 <CollectionView.ItemsLayout>
@@ -54,7 +62,7 @@
                                         HorizontalTextAlignment="Center"
                                         Margin="5,0,5,5" 
                                         LineBreakMode="WordWrap"
-                                        MaxLines="16"/>
+                                        MaxLines="4"/>
 
                                     <Label
                                         Text="{Binding ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}"
