@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.companyname.obligatoriomauiefycs">
+
 	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:usesCleartextTraffic="true"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -18,4 +20,9 @@
 	<uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND" />
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.MANAGE_DEVICE_POLICY_CAMERA" />
+
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:label="TuApp" android:supportsRtl="true">
+		<!-- API Key de Google Maps -->
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBRt72jXSHU5B74pljUjncIAIgBxfixHDw" />
+	</application>
 </manifest>

@@ -50,6 +50,12 @@
             Title="Eliminar patrocinadores"
             ContentTemplate="{DataTemplate local:EliminarPatrocinadores}"
             Route="EliminarPatrocinadores" />
+
+        <ShellContent
+            Title="Gelocalización"
+            ContentTemplate="{DataTemplate local:VerPatrocinadoresMapa}"
+            Route="VerPatrocinadoresMapa" />
+
     </FlyoutItem>
 
     <FlyoutItem Title="Clima" x:Name="fyClima">

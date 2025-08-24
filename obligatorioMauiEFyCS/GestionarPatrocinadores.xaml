@@ -13,7 +13,8 @@
                 <VerticalStackLayout Spacing="15">
                     <Entry x:Name="nombrePatrocinador" Placeholder="Escriba el nombre del patrocinador" PlaceholderColor="Black"/>
                     <Entry x:Name="iconoDelPatrocinador" Placeholder="Pegá la URL del icono" PlaceholderColor="Black" Keyboard="Url" TextColor="Black" />
-                    <Entry x:Name="ubicacionDelPatrocinador" Placeholder="Eliga la ubicación del patrocinador" PlaceholderColor="Black"/>
+                    <Entry x:Name="ubicacionDelPatrocinador" Placeholder="Elga la direccion del patrocinador mediante el mapa" PlaceholderColor="Black"/>
+                    <Button Text="Ir a seleccionar ubicación en mapa" BackgroundColor="LightGreen" TextColor="Black" Clicked="OnClickSeleccionarUbicacion"/>
                     <Button Text="Crear patrocinador" BackgroundColor="Aqua" TextColor="Black" Clicked="OnClickCrearPatrocinador"/>
                 </VerticalStackLayout>
 
