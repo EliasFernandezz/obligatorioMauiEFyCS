@@ -34,7 +34,7 @@
 
             <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
                 <HorizontalStackLayout Spacing="10">
-                    <Image Source="usa.png" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
+                    <Image Source="usa.jpg" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
                     <Label 
                         Text="Dólar estadounidense:     " 
                         HorizontalOptions="Start" 

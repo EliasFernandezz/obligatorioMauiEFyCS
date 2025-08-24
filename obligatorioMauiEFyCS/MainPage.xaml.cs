@@ -23,7 +23,7 @@ namespace obligatorioMauiEFyCS
             }
             else
             {
-                imgFotoPerfil.Source = "foto_perfil_por_defecto.png"; // Imagen por defecto si no hay foto
+                imgFotoPerfil.Source = "foto_perfil_por_defecto.jpg"; // Imagen por defecto si no hay foto
             }
         }
 
