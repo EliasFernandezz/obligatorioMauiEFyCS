@@ -16,10 +16,10 @@
             <Frame CornerRadius="15" Padding="20" BackgroundColor="#44000000" HorizontalOptions="Center" WidthRequest="400">
 
                 <VerticalStackLayout Spacing="15">
-                    <Entry x:Name="nombrePatrocinador" Placeholder="Escriba el nombre del patrocinador" PlaceholderColor="Black"/>
-                    <Entry x:Name="iconoDelPatrocinador" Placeholder="Pegá la URL del icono" PlaceholderColor="Black" Keyboard="Url" TextColor="Black" />
-                    <Entry x:Name="ubicacionDelPatrocinador" Placeholder="Escriba manualmente la ubicacion" PlaceholderColor="Black"/>
-                    <Button x:Name="SeleccionarUbicacion" Text="Ir a seleccionar ubicación en mapa" BackgroundColor="LightGreen" TextColor="Black" Clicked="OnClickSeleccionarUbicacion"/>
+                    <Entry x:Name="nombrePatrocinador" Placeholder="Escriba el nombre del patrocinador"/>
+                    <Entry x:Name="iconoDelPatrocinador" Placeholder="Pegá la URL del icono" Keyboard="Url"/>
+                    <Entry x:Name="ubicacionDelPatrocinador" Placeholder="Escriba manualmente la ubicacion" />
+                    <Button x:Name="SeleccionarUbicacion" Text="Ir a seleccionar ubicación en mapa" Clicked="OnClickSeleccionarUbicacion"/>
                     <Button Text="Crear patrocinador" Clicked="OnClickCrearPatrocinador" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
