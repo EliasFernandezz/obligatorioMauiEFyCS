@@ -8,6 +8,11 @@ namespace obligatorioMauiEFyCS
         {
             InitializeComponent();
             mostrarSecciones();
+
+            if (DeviceInfo.Current.Idiom == DeviceIdiom.Desktop)
+            {
+                    scGeolocalizacion.IsVisible = false;
+            }
         }
 
         public void mostrarSecciones()
@@ -16,17 +21,14 @@ namespace obligatorioMauiEFyCS
             bool verNoticias = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerNoticias", true);
             bool verCotizaciones = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerCotizaciones", true);
             bool verCine = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerCine", true);
-            bool verPatrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerPatrocinadores", true);
-            bool gestionarPatrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefGestionarPatrocinadores", true);
+            bool patrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefPatrocinadores", true);
 
             fyClima.IsVisible = verClima;
             fyNoticias.IsVisible = verNoticias;
             fyCotizaciones.IsVisible = verCotizaciones;
             fyCine.IsVisible = verCine;
+            fyPatrocinadores.IsVisible = patrocinadores;
 
-            fyPatrocinadores.IsVisible = gestionarPatrocinadores || verPatrocinadores;
-            fyVerPatrocinadores.IsVisible = verPatrocinadores;
-            fyGestionarPatrocinadores.IsVisible = gestionarPatrocinadores;
         }
     }
 }

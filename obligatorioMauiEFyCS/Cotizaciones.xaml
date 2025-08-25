@@ -32,64 +32,85 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
-                <HorizontalStackLayout Spacing="10">
-                    <Image Source="usa.jpg" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
-                    <Label 
-                        Text="Dólar estadounidense:     " 
-                        HorizontalOptions="Start" 
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4" 
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
+            <Frame x:Name="frameCotizacionDolar" Grid.Row="0" Grid.Column="0" MaximumWidthRequest="600" BackgroundColor="#44000000" CornerRadius="16">
+                <Grid ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="usa.jpg" Grid.Column="0" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Dólar estadounidense"
+                           HorizontalOptions="Start" 
+                           TextColor="#cdd1d4" 
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+
                     <Label x:Name="lblCotizacionDolar"
-                        Text="1 U$D → "
-                        HorizontalOptions="End"
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4"
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
-                </HorizontalStackLayout>
+                           Grid.Column="2"
+                           Text="1 U$D → "
+                           HorizontalOptions="End"
+                           TextColor="#cdd1d4"
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                </Grid>
             </Frame>
 
             <Frame x:Name="frameCotizacionEuro" Grid.Row="1" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
-                <HorizontalStackLayout Spacing="10">
-                    <Image Source="europa.png" HeightRequest="40" WidthRequest="80" VerticalOptions="Center"/>
-                    <Label 
-                        Text="Euro:     " 
-                        HorizontalOptions="Start" 
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4" 
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
+                <Grid ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="europa.png" Grid.Column="0" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Euro"
+                           HorizontalOptions="Start" 
+                           TextColor="#cdd1d4" 
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+
                     <Label x:Name="lblCotizacionEuro"
-                        Text="1 EUR → "
-                        HorizontalOptions="End"
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4"
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
-                </HorizontalStackLayout>
+                           Grid.Column="2"
+                           Text="1 EUR → "
+                           HorizontalOptions="End"
+                           TextColor="#cdd1d4"
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                </Grid>
             </Frame>
 
             <Frame x:Name="frameCotizacionReal" Grid.Row="2" Grid.Column="0" BackgroundColor="#44000000" CornerRadius="16">
-                <HorizontalStackLayout Spacing="10">
-                    <Image Source="brasil.png" HeightRequest="40" WidthRequest="80" VerticalOptions="Center"/>
-                    <Label 
-                        Text="Real brasileño:     " 
-                        HorizontalOptions="Start" 
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4" 
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
+                <Grid ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="brasil.png" Grid.Column="0" HeightRequest="40" WidthRequest="70" VerticalOptions="Center"/>
+
+                    <Label Grid.Column="1" 
+                           Text="Real brasilero"
+                           HorizontalOptions="Start" 
+                           TextColor="#cdd1d4" 
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+
                     <Label x:Name="lblCotizacionReal"
-                        Text="1 BRL → "
-                        HorizontalOptions="End"
-                        VerticalOptions="Center"
-                        TextColor="#cdd1d4"
-                        FontSize="Medium"
-                        FontAttributes="Bold"/>
-                </HorizontalStackLayout>
+                           Grid.Column="2"
+                           Text="1 U$D → "
+                           HorizontalOptions="End"
+                           TextColor="#cdd1d4"
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                </Grid>
             </Frame>
         </Grid>
     </VerticalStackLayout>

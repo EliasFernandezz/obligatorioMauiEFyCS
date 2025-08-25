@@ -16,8 +16,7 @@ public partial class Preferencias : ContentPage
         bool verNoticias = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerNoticias", true);
         bool verCotizaciones = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerCotizaciones", true);
         bool verCine = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerCine", true);
-        bool verPatrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefVerPatrocinadores", true);
-        bool gestionarPatrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefGestionarPatrocinadores", true);
+        bool patrocinadores = Preferences.Get($"{SesionUsuario.Instance.Nickname}_prefPatrocinadores", true);
 
         radioVerClimaSi.IsChecked = verClima;
         radioVerClimaNo.IsChecked = !verClima;
@@ -31,11 +30,8 @@ public partial class Preferencias : ContentPage
         radioVerCineSi.IsChecked = verCine;
         radioVerCineNo.IsChecked = !verCine;
 
-        radioVerPatrocinadoresSi.IsChecked = verPatrocinadores;
-        radioVerPatrocinadoresNo.IsChecked = !verPatrocinadores;
-
-        radioGestionarPatrocinadoresSi.IsChecked = gestionarPatrocinadores;
-        radioGestionarPatrocinadoresNo.IsChecked = !gestionarPatrocinadores;
+        radioPatrocinadoresSi.IsChecked = patrocinadores;
+        radioPatrocinadoresNo.IsChecked = !patrocinadores;
     }
 
 
@@ -46,8 +42,7 @@ public partial class Preferencias : ContentPage
         Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefVerNoticias", radioVerNoticiasSi.IsChecked);
         Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefVerCotizaciones", radioVerCotizacionesSi.IsChecked);
         Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefVerCine", radioVerCineSi.IsChecked);
-        Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefVerPatrocinadores", radioVerPatrocinadoresSi.IsChecked);
-        Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefGestionarPatrocinadores", radioGestionarPatrocinadoresSi.IsChecked);
+        Preferences.Set($"{SesionUsuario.Instance.Nickname}_prefPatrocinadores", radioPatrocinadoresSi.IsChecked);
 
         ((AppShell)Application.Current.MainPage).mostrarSecciones();
         await Shell.Current.GoToAsync("//MainPage");

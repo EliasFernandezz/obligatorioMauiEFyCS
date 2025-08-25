@@ -11,10 +11,20 @@ public partial class GestionarPatrocinadores : ContentPage
         InitializeComponent();
         string dbPath = Path.Combine(FileSystem.AppDataDirectory, "patrocinadores.db");
         _service = new PatrocinadorService(dbPath);
-        MessagingCenter.Subscribe<VerPatrocinadoresMapa, Location>(this, "UbicacionSeleccionada", (sender, loc) =>
+
+        if (DeviceInfo.Current.Idiom == DeviceIdiom.Desktop)
         {
-            ubicacionDelPatrocinador.Text = $"{loc.Latitude},{loc.Longitude}";
-        });
+            SeleccionarUbicacion.IsVisible = false;
+        }
+        else if (DeviceInfo.Current.Idiom == DeviceIdiom.Phone)
+        {
+            ubicacionDelPatrocinador.IsVisible = false;
+        }
+
+            MessagingCenter.Subscribe<VerPatrocinadoresMapa, Location>(this, "UbicacionSeleccionada", (sender, loc) =>
+            {
+                ubicacionDelPatrocinador.Text = $"{loc.Latitude},{loc.Longitude}";
+            });
     }
 
     private async void OnClickSeleccionarUbicacion(object sender, EventArgs e)

@@ -11,7 +11,7 @@
     </ContentPage.Background>
 
     <ScrollView>
-        <VerticalStackLayout VerticalOptions="Center" WidthRequest="700" >
+        <VerticalStackLayout VerticalOptions="Center" MaximumWidthRequest="700" >
 
             <Frame BackgroundColor="#25ffffff" CornerRadius="16" Padding="24" HasShadow="True">
                 <VerticalStackLayout>
@@ -23,7 +23,6 @@
                            Margin="0,0,0,35"/>
                     <Grid ColumnSpacing="20" RowSpacing="18">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -52,13 +51,9 @@
                         <RadioButton x:Name="radioVerCineSi" Grid.Row="3" Grid.Column="1" Content="Sí" GroupName="verCine"/>
                         <RadioButton x:Name="radioVerCineNo" Grid.Row="3" Grid.Column="2" Content="No" GroupName="verCine"/>
 
-                        <Label Grid.Row="4" Grid.Column="0" Text="Ver Patrocinadores:" FontAttributes="Bold"/>
-                        <RadioButton x:Name="radioVerPatrocinadoresSi" Grid.Row="4" Grid.Column="1" Content="Sí" GroupName="verPatrocinadores"/>
-                        <RadioButton x:Name="radioVerPatrocinadoresNo" Grid.Row="4" Grid.Column="2" Content="No" GroupName="verPatrocinadores"/>
-
-                        <Label Grid.Row="5" Grid.Column="0" Text="Gestionar Patrocinadores:" FontAttributes="Bold"/>
-                        <RadioButton x:Name="radioGestionarPatrocinadoresSi" Grid.Row="5" Grid.Column="1" Content="Sí" GroupName="gestionarPatrocinadores"/>
-                        <RadioButton x:Name="radioGestionarPatrocinadoresNo" Grid.Row="5" Grid.Column="2" Content="No" GroupName="gestionarPatrocinadores"/>
+                        <Label Grid.Row="4" Grid.Column="0" Text="Interactuar con patrocinadores:" FontAttributes="Bold"/>
+                        <RadioButton x:Name="radioPatrocinadoresSi" Grid.Row="4" Grid.Column="1" Content="Sí" GroupName="patrocinadores"/>
+                        <RadioButton x:Name="radioPatrocinadoresNo" Grid.Row="4" Grid.Column="2" Content="No" GroupName="patrocinadores"/>
                     </Grid>
 
                     <Button Text="Guardar Preferencias"

@@ -35,13 +35,11 @@
 
     <FlyoutItem Title="Patrocinadores"  x:Name="fyPatrocinadores">
         <ShellContent
-            x:Name="fyGestionarPatrocinadores"
             Title="Gestionar patrocinadores"
             ContentTemplate="{DataTemplate local:GestionarPatrocinadores}"
             Route="GestionarPatrocinadores" />
 
         <ShellContent
-            x:Name="fyVerPatrocinadores"
             Title="Ver patrocinadores"
             ContentTemplate="{DataTemplate local:VerPatrocinadores}"
             Route="VerPatrocinadores" />
@@ -52,6 +50,7 @@
             Route="EliminarPatrocinadores" />
 
         <ShellContent
+            x:Name="scGeolocalizacion"
             Title="Gelocalización"
             ContentTemplate="{DataTemplate local:VerPatrocinadoresMapa}"
             Route="VerPatrocinadoresMapa" />

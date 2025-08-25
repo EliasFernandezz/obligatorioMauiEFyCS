@@ -23,13 +23,14 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1"
                 Grid.Column="0"
-                Margin="125,0,0,0"/>
+                HorizontalOptions="Start"/>
 
                 <Button
                 x:Name="btnCerrarSesion"
                 Text="Cerrar Sesión"
                 Grid.Column="1"
-                Clicked="btnCerrarSesion_Clicked"/>
+                Clicked="btnCerrarSesion_Clicked"
+                HorizontalOptions="End"/>
             </Grid>
 
             <Image

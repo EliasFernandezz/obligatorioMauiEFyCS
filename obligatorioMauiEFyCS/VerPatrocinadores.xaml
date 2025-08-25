@@ -3,7 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="obligatorioMauiEFyCS.VerPatrocinadores"
              Title="Ver patrocinadores">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#0c4cb3" Offset="0.0"/>
+            <GradientStop Color="#4e58a3" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ScrollView>
+
         <CollectionView x:Name="patrocinadoresListView">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10"/>
@@ -13,48 +22,45 @@
                     <VerticalStackLayout Padding="10">
 
                         <Frame CornerRadius="20"
-                            HasShadow="True"
-                            Padding="15"
-                            BackgroundColor="Cyan"
-                            BorderColor="Blue">
+                                HasShadow="True"
+                                Padding="15"
+                                BackgroundColor="#44000000"
+                               HorizontalOptions="Center">
 
                             <VerticalStackLayout Spacing="10">
 
                                 <Label Text="{Binding id}" 
-                                    FontSize="20" 
-                                    FontAttributes="Bold" 
-                                    TextColor="#333"
-                                    HorizontalOptions="Center" />
+                                        FontSize="20" 
+                                        FontAttributes="Bold" 
+                                        HorizontalOptions="Center" />
 
 
                                 <Label Text="{Binding nombre}" 
-                                    FontSize="20" 
-                                    FontAttributes="Bold" 
-                                    TextColor="#333"
-                                    HorizontalOptions="Center" />
+                                        FontSize="20" 
+                                        FontAttributes="Bold" 
+                                        HorizontalOptions="Center" />
 
 
                                 <BoxView HeightRequest="1" 
-                                    Color="Black" 
-                                    HorizontalOptions="Fill" />
+                                        Color="Black" 
+                                        HorizontalOptions="Fill" />
 
 
                                 <Label Text="{Binding direccion}" 
-                                    FontSize="14" 
-                                    TextColor="Black"
-                                    HorizontalOptions="Center" />
+                                        FontSize="14" 
+                                        HorizontalOptions="Center" />
 
 
                                 <BoxView HeightRequest="1" 
-                                    Color="Black" 
-                                    HorizontalOptions="Fill" />
+                                        Color="Black" 
+                                        HorizontalOptions="Fill" />
 
 
                                 <Image Source="{Binding logo}" 
-                                    HeightRequest="60" 
-                                    WidthRequest="80"
-                                    Aspect="AspectFit"
-                                    HorizontalOptions="Center" />
+                                        HeightRequest="60" 
+                                        WidthRequest="80"
+                                        Aspect="AspectFit"
+                                        HorizontalOptions="Center" />
                             </VerticalStackLayout>
 
                         </Frame>

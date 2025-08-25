@@ -12,6 +12,15 @@ public partial class Cine : ContentPage
     {
         InitializeComponent();
         Task cargandoEstrenos = CargarEstrenos();
+
+        if (DeviceInfo.Current.Idiom == DeviceIdiom.Phone)
+        {
+            peliculasLayout.Span = 1;
+        }
+        else if(DeviceInfo.Current.Idiom == DeviceIdiom.Desktop)
+        {
+            peliculasLayout.Span = 2;
+        }
     }
 
     public async Task CargarEstrenos()

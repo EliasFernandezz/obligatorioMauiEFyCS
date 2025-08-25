@@ -16,13 +16,8 @@
         <VerticalStackLayout Padding="20" Spacing="20">
 
             <Grid HorizontalOptions="Center" VerticalOptions="Center">
-                <BoxView Color="DarkBlue"
-                    Opacity="0.4"
-                    CornerRadius="14"
-                    HeightRequest="210"
-                    WidthRequest="810"/>
 
-                <Frame CornerRadius="12" HasShadow="True" Padding="15" BackgroundColor="#55000000" HeightRequest="200" WidthRequest="800">
+                <Frame CornerRadius="12" HasShadow="True" Padding="15" BackgroundColor="#33000000" MaximumWidthRequest="800" HeightRequest="200" HorizontalOptions="Fill">
 
                     <Grid>
 
@@ -69,11 +64,11 @@
                     <DataTemplate>
                         
                         <Frame Padding="10"
-                            BackgroundColor="#33000000"
+                            BackgroundColor="#33ffffff"
                             CornerRadius="12"
                             WidthRequest="200"
-                            HeightRequest="185"
-                            HorizontalOptions="Start">
+                            MaximumHeightRequest="200"
+                            HorizontalOptions="Fill">
                             
                             <VerticalStackLayout Spacing="5">
                                 <Label Text="{Binding dia}" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center"/>
