@@ -36,11 +36,11 @@ Proyecto académico grupal (obligatorio de **Taller de Tecnologías**, 2025), de
 
 ## Mi aporte
 
-<!-- Completar con tu trabajo real. Usar verbos de acción. Ejemplos: -->
-- **Implementé el registro y el inicio de sesión común y con huella dactilar**
-- **Integré las APIs de NewsData.io, Currency Layer y OpenWeatherMap, generé los modelos con QuickType**
-- **Desarrollé el menú de preferencias**
-- **Hice la implementación de SQLite**
+- Desarrollé el registro y el inicio de sesión, incluida la autenticación con huella dactilar, con persistencia de usuarios en SQLite.
+- Integré las APIs de noticias (NewsData.io) y de cotizaciones (CurrencyLayer).
+- Implementé el menú de preferencias, la radio en vivo y la página principal con el nickname y la foto de perfil del usuario.
+- Armé la estructura inicial de la app (navegación entre páginas y paleta de colores) y el diseño responsive para teléfono y escritorio.
+- Configuré el mapa en Android, activándolo solo en teléfonos.
 
 ## Cómo ejecutarlo
 
@@ -134,10 +134,11 @@ Group academic project (**Technology Workshop** assignment, 2025), developed at 
 
 ## My Contribution
 
-- **Implemented sign-up and both standard and fingerprint login**
-- **Integrated the NewsData.io, CurrencyLayer and OpenWeatherMap APIs and generated the models with QuickType**
-- **Built the preferences menu**
-- **Implemented the SQLite data layer**
+- Built sign-up and login, including fingerprint authentication, with user persistence in SQLite.
+- Integrated the news (NewsData.io) and exchange rate (CurrencyLayer) APIs.
+- Implemented the preferences menu, the live radio player and the home page showing the user's nickname and profile picture.
+- Set up the app's initial structure (page navigation and color palette) and the responsive design for phone and desktop.
+- Configured the map on Android, enabling it on phones only.
 
 ## Getting Started
 
